@@ -201,7 +201,7 @@
 
         <div class="card" style="margin-top:12px;">
           <h3>Send an enquiry</h3>
-          <form action="https://formspree.io/f/your-id" method="POST">
+          <form id="enquiryForm" action="https://formspree.io/f/mpwlklwd" method="POST">
             <div class="grid two">
               <div>
                 <label for="name"><strong>Name</strong></label><br>
@@ -223,8 +223,9 @@
             <input type="hidden" name="_subject" value="New enquiry from visheshkumar.dev">
             <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
               <button class="btn" type="submit">Send</button>
-              <span class="k">Powered by Formspree — replace <code>your-id</code> with your form ID.</span>
+              <span class="k">Powered by Formspree — messages go straight to your email.</span>
             </div>
+            <div id="formStatus" class="k" aria-live="polite" style="margin-top:8px;"></div>
           </form>
           <noscript>
             <p class="k">JavaScript is disabled. You can email me directly at <a href="mailto:visheshkumar.vik@gmail.com">visheshkumar.vik@gmail.com</a>.</p>
@@ -275,6 +276,39 @@
       const h = (location.hash || '#home').replace('#','');
       show(h);
     });
+
+    // Enquiry form: enhance submit to show success/error without leaving page
+    (function wireForm(){
+      const form = document.getElementById('enquiryForm');
+      const status = document.getElementById('formStatus');
+      if(!form || !status) return;
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = 'Sending…';
+        // Guard: user must replace the placeholder ID
+        if (form.action.includes('/f/your-id')) {
+          status.textContent = 'Setup needed: replace “your-id” in the form action with your real Formspree ID (e.g. https://formspree.io/f/abcde123).';
+          return;
+        }
+        try {
+          const data = new FormData(form);
+          const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data
+          });
+          if (resp.ok) {
+            status.textContent = 'Thanks! Your message has been sent.';
+            form.reset();
+          } else {
+            const err = await resp.json().catch(()=>({}));
+            status.textContent = err?.errors?.[0]?.message || 'Hmm, something went wrong. Try again or email me directly.';
+          }
+        } catch (err) {
+          status.textContent = 'Network error. Please try again or email me directly.';
+        }
+      });
+    })();
 
     init();
   </script>
