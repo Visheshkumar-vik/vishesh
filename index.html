@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishesh Kumar — Portfolio</title>
+  <meta name="description" content="Portfolio & résumé of Vishesh Kumar — Mechanical Engineering, CAD, AI & Robotics." />
+  <meta property="og:title" content="Vishesh Kumar — Portfolio" />
+  <meta property="og:description" content="Mechanical Engineering • CAD • AI & Robotics" />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>◦</text></svg>">
+  <style>
+    :root{ --bg:#ffffff; --fg:#0a0a0a; --muted:#6b7280; --line:#e5e7eb; --accent:#111111; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0a0a0a; --fg:#fafafa; --muted:#9ca3af; --line:#1f2937; --accent:#ffffff; }}
+    html,body{ height:100%; }
+    body{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    .wrap{ max-width: 960px; margin: 0 auto; padding: 20px clamp(16px,4vw,32px); }
+    header{ display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); padding:14px 0; position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in oklab, var(--bg) 90%, transparent); z-index:50; }
+    .brand{ font-weight:800; letter-spacing:-0.01em; }
+    nav{ display:flex; gap:16px; flex-wrap:wrap; }
+    nav a{ color:inherit; text-decoration:none; padding:8px 10px; border-radius:12px; }
+    nav a.active, nav a:hover{ background:var(--fg); color:var(--bg); }
+    main{ padding: 6vh 0 10vh; }
+    section[hidden]{ display:none !important; }
+    h1{ font-weight:800; letter-spacing:-0.02em; font-size: clamp(32px,5.5vw,56px); line-height:1.05; margin:0 0 16px; }
+    h2{ font-size: clamp(20px,2.8vw,28px); margin: 28px 0 8px; }
+    .tag{ color:var(--muted); font-size: clamp(14px,2.4vw,18px); margin-bottom: 28px; }
+    .grid{ display:grid; grid-template-columns:1fr; gap:18px; }
+    @media (min-width:900px){ .grid.two{ grid-template-columns: 1fr 1fr; } }
+    .card{ border:1px solid var(--line); border-radius:16px; padding:18px; }
+    .btn{ appearance:none; border:1px solid var(--fg); color:var(--fg); background:transparent; padding:12px 18px; border-radius:14px; text-decoration:none; font-weight:600; display:inline-block; }
+    .btn:hover{ background:var(--fg); color:var(--bg); }
+    .meta{ margin-top: 18px; color: var(--muted); font-size:14px; }
+    .lead{ font-size:18px; color:var(--muted); }
+    .profile{ width:160px; height:160px; border-radius:24px; object-fit:cover; border:1px solid var(--line); }
+    .proj h3{ margin:0 0 4px; }
+    .list{ padding-left:18px; }
+    .k{ color:var(--muted); font-size:14px; }
+    footer{ border-top:1px solid var(--line); padding: 18px 0; color:var(--muted); font-size:14px; }
+    .cols{ columns: 1; column-gap: 24px; }
+    @media (min-width: 900px){ .cols{ columns: 2; } }
+    form input, form textarea {width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; margin-bottom:10px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Vishesh Kumar</div>
+      <nav aria-label="primary">
+        <a href="#home" data-section="home" class="active">Home</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#resume" data-section="resume">Résumé</a>
+        <a href="#certs" data-section="certs">Certifications</a>
+        <a href="#contact" data-section="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section id="home">
+        <div class="grid two" style="align-items:center;">
+          <div>
+            <h1>Mechanical Engineering<br> CAD • FEA/CFD • Robotics</h1>
+            <p class="tag">Third‑year B.Eng (Hons), RMIT — designing and building mechanisms, simulations, and autonomous systems.</p>
+            <p class="lead">This portfolio is aimed at showcasing the technical skills I have acquired through my university coursework, hackathons, personal projects, and various training sessions and projects with student teams at RMIT University. It has been designed to supplement my resume. For each project, I have provided a detailed overview, the technical processes involved, and key outcomes supported by visuals. If you require further details regarding any of the projects, feel free to contact me.</p>
+            <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap;">
+              <a class="btn" href="portfolio.pdf" download>Download Portfolio (PDF)</a>
+              <a class="btn" href="resume.pdf" download>Download Résumé (PDF)</a>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:center;">
+            <img src="profile.jpg" alt="Vishesh Kumar profile photo" class="profile" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" hidden>
+        <h2>Projects</h2>
+        <div class="proj card">
+          <h3>Freight Pods</h3>
+          <p><strong>Overview</strong><br>RTSA hackathon project aimed at increasing the share of rail in the transit market for distances under 1500 km by designing a conductive guidance rail within a dedicated Category B lane, using existing infrastructure.</p>
+          <p><strong>Skills</strong><br>Engineering innovation, SolidWorks modelling, Motion study</p>
+          <p><strong>What I Did</strong><br>Literature review on the railway sector and industry challenges; leveraged edX course learnings; developed a Category B freight pod solution.</p>
+          <p><strong>Key Outcomes</strong><br>Produced a SolidWorks preliminary design and motion study; received positive feedback from senior RTSA members.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>Deployable Nosecone</h3>
+          <p><strong>Overview</strong><br>Trainee project under HIVE (Rocketry Club at RMIT) to design a deployable nosecone for an L2‑class rocket. Servo‑actuated two‑fairing mechanism, supported by trade studies.</p>
+          <p><strong>Skills</strong><br>OpenRocket simulation, Systems engineering</p>
+          <p><strong>What I Did</strong><br>Systems engineering + project management; trade studies for material and servo selection; parachute sizing.</p>
+          <p><strong>Key Outcomes</strong><br>Validated preliminary design with a demo prototype; simulation‑ and trade‑study‑backed CAD files.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>Electric Control Panel</h3>
+          <p><strong>Overview</strong><br>Personal project modelling an electrical control panel in SolidWorks Sheet Metal to showcase DFM skills.</p>
+          <p><strong>Skills</strong><br>Sheet metal design, SolidWorks modelling, Product design</p>
+          <p><strong>What I Did</strong><br>Designed bends, flanges, cutouts; set thickness & bend allowances; created a flat pattern for laser/CNC.</p>
+          <p><strong>Key Outcomes</strong><br>Improved DFM proficiency and practical sheet‑metal workflows.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>Quadcopter</h3>
+          <p><strong>Overview</strong><br>Personal SolidWorks model of a quadcopter to strengthen part modelling and assembly; inspired by RUASRT work.</p>
+          <p><strong>Skills</strong><br>Engineering innovation, SolidWorks, Motion study, UAV design</p>
+          <p><strong>What I Did</strong><br>Modelled components from fasteners to propellers; applied advanced mates; produced a motion study.</p>
+          <p><strong>Key Outcomes</strong><br>Boosted CAD proficiency; created an exploded view for technical communication.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>Landing Gear</h3>
+          <p><strong>Overview</strong><br>Personal project modelling landing gear to understand mechanical linkages and realistic motion.</p>
+          <p><strong>Skills</strong><br>Engineering innovation, SolidWorks modelling, FEA analysis</p>
+          <p><strong>What I Did</strong><br>Modelled all components; advanced mates for retraction/extension; SolidWorks FEA across materials.</p>
+          <p><strong>Key Outcomes</strong><br>Deeper understanding of complex linkages and introductory FEA for robust design.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>VTOL Drone</h3>
+          <p><strong>Overview</strong><br>RUASRT research contribution to a VTOL prototype by modifying an existing UAV frame for vertical lift.</p>
+          <p><strong>Skills</strong><br>3D printing, Prototyping, CAD modelling</p>
+          <p><strong>What I Did</strong><br>Rapid‑prototyped and 3D‑printed custom brackets for carbon‑fibre rods; adjusted inherited CAD; iterative tests.</p>
+          <p><strong>Key Outcomes</strong><br>Hands‑on prototyping and structural problem‑solving for UAVs.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>Autonomous Drone <span class="k">(Ongoing)</span></h3>
+          <p><strong>Overview</strong><br>RUASRT autonomous UAV project: colour detection and autonomous landing; building Python skills.</p>
+          <p><strong>Skills</strong><br>Python, Autonomous navigation</p>
+          <p><strong>What I Did</strong><br>Working with sensors (gyro, range, colour, temperature) to enable autonomy; developing control scripts.</p>
+          <p><strong>Key Outcomes</strong><br>Targeting associate‑level Python proficiency and deeper autonomy understanding.</p>
+        </div>
+
+        <div class="proj card">
+          <h3>Coursework Highlights</h3>
+          <p><strong>Overview</strong><br>Selected academic projects demonstrating industry‑relevant skills.</p>
+          <p><strong>Skills</strong><br>Arduino, 3D printing, Electronics & Hardware Integration</p>
+          <p><strong>Mechatronics Project</strong><br>Pseudocode & path‑map logic for an obstacle course; top‑percentile finish and faculty commendation.</p>
+          <p><strong>Systems Engineering Project</strong><br>Leading‑edge plastic film concept to mitigate flow separation; exposure to ESCs, flight controls, and UAV components.</p>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume" hidden>
+        <h2>Résumé</h2>
+        <div class="card">
+          <h3>PROFESSIONAL EXPERIENCE</h3>
+          <p><strong>Lab Manager — Leadership Team | RUASRT — RMIT UAV Research Team</strong> (Jul 2025 – Present | Melbourne, VIC)<br>Manage lab space and technical infrastructure (CNC, composites, 3D printers); coordinate sub‑teams; ensure safety compliance.</p>
+          <p><strong>Systems Engineer (Trainee) | RMIT High Velocity</strong> (Apr 2025 – Jul 2025 | Melbourne, VIC)<br>Contributed systems engineering to deployable nosecone for L2‑class rocket; servo selection, parachute sizing; trade studies; failure analysis & validation plan.</p>
+          <p><strong>Engineering & Marketing Intern | Engineering & Scientific International</strong> (Jul 2024 | Melbourne, VIC)<br>PESTEL analysis for triple‑glazed windows IP; product‑market fit insights.</p>
+          <p><strong>Analyst Intern | Pure Protein</strong> (Apr 2024 | Melbourne, VIC)<br>Led market trends analysis; recommended 1.3× flavour expansion.</p>
+
+          <h3>ADDITIONAL ACTIVITIES</h3>
+          <p><strong>Hackathon | RTSA (State Level)</strong> (Jul 2025 | Melbourne, VIC)<br>One of 28 selected Victorian university candidates; developed innovative freight pod solution featured in portfolio.</p>
+          <p><strong>STEM Outreach Facilitator | Royal Aeronautical Society</strong> (Sep 2024 | 1 mo)<br>Guided 25 students (grades 7–10) through designing and building fixed‑wing gliders.</p>
+
+          <h3>EDUCATION</h3>
+          <p><strong>RMIT University</strong> — Bachelor of Engineering (Mechanical/Aerospace), Feb 2023 – Nov 2026 | Grade: Distinction<br>Coursework highlights & tools: MATLAB, SOLIDWORKS, +3 skills.</p>
+          <p><strong>Ryan International School</strong> — Year 10 & 12, Apr 2012 – Jun 2022 | Delhi NCR<br>Recognised as Math wiz kid and star achiever for academic excellence.</p>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certs" hidden>
+        <h2>Licenses & Certifications</h2>
+        <div class="card">
+          <ul class="list">
+            <li><strong>Railway Safety and Systems Engineering</strong> — Udemy (Issued Jul 2025) — Skills: Railroad Engineering</li>
+            <li><strong>Detailed Introduction to Ansys Workbench</strong> — Udemy (Issued Jul 2025) — Skills: Ansys Workbench</li>
+            <li><strong>Python for Mechanical Engineers</strong> — Udemy (Issued Jul 2025) — Skills: Python</li>
+            <li><strong>SOLIDWORKS Certification 1</strong> — Udemy (Issued Jun 2025) — Skills: SOLIDWORKS</li>
+            <li><strong>SOLIDWORKS Certification 2</strong> — Udemy (Issued Jul 2025) — Skills: SOLIDWORKS · Sheet Metal · Modelling & Simulation · Drafting</li>
+            <li><strong>SOLIDWORKS Certification 3</strong> — Udemy (Issued Jul 2025) — Skills: SOLIDWORKS</li>
+            <li><strong>Siemens NX</strong> — Udemy (Issued Jul 2025) — Skills: Siemens NX</li>
+            <li><strong>Arduino Programming</strong> — Udemy (Issued Jun 2025) — Skills: Arduino · Arduino IDE</li>
+            <li><strong>Customer Analytics</strong> — University of Pennsylvania (Issued Apr 2025, ID VFLZKUFWPM97) — Skills: Marketing · Strategy · Predictive Analytics · Business Analysis</li>
+            <li><strong>Data Analytics for Lean Six Sigma</strong> — University of Amsterdam (Issued Apr 2025, ID CW3RI6B9YGHA) — Skills: Data Analysis · Lean Six Sigma · Probability & Statistics · Data Visualisation · Minitab</li>
+            <li><strong>KPMG U.S. Career Catalyst: Advisory Job Simulation</strong> — KPMG US (Issued Apr 2025, ID 3fY9CHf99j2KaATd3)</li>
+            <li><strong>KPMG UK: Introduction to Technology Job Simulation</strong> — KPMG (Issued Apr 2025, ID AWSgRiSmbd5vBpe2X)</li>
+            <li><strong>AI For Business</strong> — University of Pennsylvania (ID I0GFQ8VZGD0D) — Skills: Algorithms · Data Analysis · Machine Learning · Leadership</li>
+            <li><strong>Construction Management</strong> — Columbia University (ID U8G7HU12BYIZ) — Skills: Project & Construction Management</li>
+            <li><strong>Google Data Analytics</strong> — Google (ID P8WNCDNADVMF) — Skills: Data Analysis · R · Data Visualisation</li>
+            <li><strong>Google Project Management</strong> — Google (ID 7B9IUTWJ3MOH) — Skills: Project Planning & Management</li>
+            <li><strong>Prompt Engineering</strong> — Vanderbilt University (ID BU6Q3SYEWBNO) — Skills: Prompt Engineering · Ethical AI</li>
+            <li><strong>Six Sigma Black Belt</strong> — Kennesaw State University (ID SNGVOHST9Q24) — Skills: DFSS · Ops & Supply Chain · Problem Solving</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" hidden>
+        <h2>Contact</h2>
+        <div class="card">
+          <p><strong>Location:</strong> Melbourne, Australia</p>
+          <p><strong>Phone:</strong> <a href="tel:+61434774530">+61 434 774 530</a></p>
+          <p><strong>Email:</strong> <a href="mailto:visheshkumar.vik@gmail.com">visheshkumar.vik@gmail.com</a></p>
+        </div>
+
+        <div class="card" style="margin-top:12px;">
+          <h3>Send an enquiry</h3>
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <div class="grid two">
+              <div>
+                <label for="name"><strong>Name</strong></label><br>
+                <input id="name" name="name" required placeholder="Your name">
+              </div>
+              <div>
+                <label for="email"><strong>Email</strong></label><br>
+                <input id="email" type="email" name="email" required placeholder="you@example.com">
+              </div>
+            </div>
+            <div>
+              <label for="topic"><strong>What would you like to know?</strong></label><br>
+              <input id="topic" name="topic" required placeholder="e.g., Collaboration, project details, availability">
+            </div>
+            <div>
+              <label for="message"><strong>Message</strong></label><br>
+              <textarea id="message" name="message" required placeholder="Write your enquiry..." rows="5"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New enquiry from visheshkumar.dev">
+            <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+              <button class="btn" type="submit">Send</button>
+              <span class="k">Powered by Formspree — replace <code>your-id</code> with your form ID.</span>
+            </div>
+          </form>
+          <noscript>
+            <p class="k">JavaScript is disabled. You can email me directly at <a href="mailto:visheshkumar.vik@gmail.com">visheshkumar.vik@gmail.com</a>.</p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Vishesh Kumar</span>
+    </footer>
+  </div>
+
+  <script>
+    // Build the sections map defensively to avoid null reference errors
+    const sectionIds = ["home","projects","resume","certs","contact"];
+    const links = [...document.querySelectorAll('nav a[data-section]')];
+    const sections = {};
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) {
+        console.warn("Missing section in DOM:", id);
+      } else {
+        sections[id] = el;
+      }
+    });
+
+    function show(which){
+      if (!sections[which]) which = 'home';
+      Object.entries(sections).forEach(([k,el]) => { el.hidden = (k !== which); });
+      links.forEach(a => a.classList.toggle('active', a.dataset.section === which));
+      if (location.hash !== '#'+which) history.replaceState(null,'','#'+which);
+    }
+
+    function init(){
+      const h = (location.hash || '#home').replace('#','');
+      show(sections[h] ? h : 'home');
+      document.getElementById('year').textContent = new Date().getFullYear();
+    }
+
+    // Self-test to catch missing sections/IDs
+    (function selfTest(){
+      const missing = sectionIds.filter(id => !document.getElementById(id));
+      if (missing.length) console.error('Self-test: missing sections', missing);
+    })();
+
+    window.addEventListener('hashchange', () => {
+      const h = (location.hash || '#home').replace('#','');
+      show(h);
+    });
+
+    init();
+  </script>
+</body>
+</html>
